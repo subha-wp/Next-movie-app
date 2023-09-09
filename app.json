@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Movies Hub",
+    "slug": "nextMovies",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Movies-icon-logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/movies-splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Movies-icon-logo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.devcodersubha.nextMovies"
+    },
+    "web": {
+      "favicon": "./assets/movies-Favicon.png"
+    },
+    "extra": {
+      "apiUrl": "https://movie-backend-production-1b80.up.railway.app/api",
+      "token": "82a85970a4aca6865beae56e600760b88a38cf3ea21b05a57e61552a491db6e8d208edb4e9a2d1a3eb529dd65e1a3e057112b21e538d8c5cd3b8d4fbbed34dd3a72bdc0cc36930ff04ceb7d2e06b29d60110076326619f39d7a7ba6b5b61448faa2adca3cc4c86b37c9adb538157dad0ba0c021e6e463e14709279ac9eb89dbf",
+      "eas": {
+        "projectId": "3946377a-074a-4de8-9e4c-dade288e2da6"
+      }
+    }
+  }
+}

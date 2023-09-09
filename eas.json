@@ -1,0 +1,23 @@
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {
+      "env": {
+        "API_URL": "https://backend-albarr-production.up.railway.app",
+        "API_TOKEN" : "2ab973de7a0f95f28e771bb3d5278de43c5432ba6fbcbd5bf94c54e1d5acb049cc27381f8b0481d6f42bd6108e2dcc86b50fade9b37bbca2072eb724136c5f876e698812c601d4aa8b477a2ac808f52b431ed4c383b14c2717f3e57e935fea5a4da1f8decc484b11f4ed68c2b8d6000f89aa91c75e93aace388aedad0d9fc691"
+      }
+    }
+  }
+}
