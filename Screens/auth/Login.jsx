@@ -21,6 +21,9 @@ const Login = ({ navigation }) => {
   const [secureText, setSecureText] = useState(true);
   const [loading, setLoading] = useState(false);
 
+  const apiUrl = Constants.expoConfig.extra.apiUrl;
+  const token = Constants.expoConfig.extra.token;
+
   const handleLogin = async () => {
     setLoading(true);
     await axios
@@ -38,9 +41,7 @@ const Login = ({ navigation }) => {
   };
 
   const handleGuest = () => {
-    navigation.navigate("Home", {
-
-    });
+    navigation.navigate("Home", {});
   };
 
   useEffect(() => {}, []);
@@ -106,7 +107,7 @@ const Login = ({ navigation }) => {
               </StyledText>
             </StyledButton>
             {/* Sign up */}
-            <StyledButton>
+            <StyledButton onPress={() => navigation.navigate("Register", {})}>
               <StyledText className="text-center">
                 Don't have an account?{" "}
                 <Text className="text-[#0BFA15] text-[19px]">sign up</Text>

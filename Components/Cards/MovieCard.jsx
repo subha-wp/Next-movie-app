@@ -1,19 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { styled } from "nativewind";
-import Toast from "react-native-toast-message";
-import { View, Text, TextInput, Pressable, Image } from "react-native";
-import Constants from "expo-constants";
-import axios from "axios";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { FontAwesome5 } from "@expo/vector-icons";
+import React from "react";
 
-const MovieCard = ({ movie }) => {
+import { Pressable, Image } from "react-native";
+
+const MovieCard = ({ movie, navigation }) => {
+  const id = movie.id;
+
+  const { name, image, downloadLink, lang, industry, releasedYear } =
+    movie.attributes;
+  const movieImage = image.data[0].attributes.url;
+
   return (
-    <Pressable className="m-1">
+    <Pressable
+      className="m-1 w-[175px]  h-[250px] overflow-hidden rounded-lg"
+      onPress={() =>
+        navigation.navigate("MovieScreen", {
+          name,
+          image,
+          downloadLink,
+          lang,
+          industry,
+          releasedYear,
+          id,
+        })
+      }
+    >
       <Image
-        source={require("../../assets/temp-movie-poster/Movie-1.jpg")}
-        className="w-[180px] h-[250px] rounded-lg"
-        resizeMode="contain"
+        source={{ uri: movieImage }}
+        className="w-[175px] h-[250px]"
+        resizeMode="stretch"
       />
     </Pressable>
   );
